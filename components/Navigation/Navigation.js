@@ -42,6 +42,7 @@ var Navigation = React.createClass({
     render(){
         return (
               <AppBar
+                  style={{zIndex:9999}}
                   showMenuIconButton={false}
                   title={
                         <div>
