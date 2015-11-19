@@ -43,8 +43,12 @@ var Navigation = React.createClass({
         return (
               <AppBar
                   showMenuIconButton={false}
-                  title={[<img key={0} src={require("./m_logo_white.svg")}></img>,
-                          <span key={1}>docs</span>]}
+                  title={
+                        <div>
+                            <img className="m-logo-selector" key={0} src={require("./m_logo_white.svg")}></img>
+                            <span className="m-brand-selector" key={1}>docs</span>
+                        </div>
+                  }
                   iconElementRight={
                       <div>
                           <Tabs value={slideIndex}  tabItemContainerStyle={{height:'64px'}}>
