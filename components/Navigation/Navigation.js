@@ -13,6 +13,26 @@ import FlatButton from 'material-ui/lib/flat-button';
 import Location from '../../core/Location';
 
 var slideIndex = "0"
+var window = window || undefined
+if(window){
+    switch(window.location.path){
+            case "/":
+                slideIndex='0'
+            break;
+            case "/start":
+                slideIndex='1'
+            break;
+            case "/guides":
+                slideIndex='2'
+            break;
+            case "/developer":
+                slideIndex='3'
+            break;
+            default:
+                slideIndex='0'
+            break;
+        }
+}
 var handleClick = function(index, event){
     let allowTransition = true;
     let path='/'
@@ -42,7 +62,7 @@ var Navigation = React.createClass({
     render(){
         return (
               <AppBar
-                  style={{zIndex:9999}}
+                  style={{zIndex:9999,position:'fixed',top:0}}
                   showMenuIconButton={false}
                   title={
                         <div>

@@ -1,0 +1,65 @@
+.m-content {
+  font-weight: 300;
+  margin-left: 270px;
+  margin-top: 110px;
+  h4 {
+      font-size: 30px;
+      font-weight: 300;
+      margin-top: 14px;
+      margin-bottom: 14px;
+  }
+  .m-top-graph, .m-code {
+      margin-bottom: 60px;
+      font-size: 15px;
+  }
+  .m-dt-property-type {
+      float: left;
+      width: 30%;
+      text-align: right;
+      padding-right: 10px;
+  }
+  .m-dt-property {
+      font-size: 18px;
+      margin-bottom:10px;
+      font-weight: 400;
+      display: block;
+  }
+  .m-dt-type {
+      display: inline-block;
+      background:#E4E4E4;
+      border-radius: 20px;
+      color: #958b83;
+      font-size:14px;
+      font-weight:300;
+      padding: 0 10px 0 10px;
+  }
+  .m-dd-text {
+      width: 66%;
+      padding-left: 10px;
+      font-weight: 300;
+      margin-left: 33%;
+      margin-bottom: 30px;
+      font-size: 15px;
+  }
+  .m-divider {
+      text-align: center;
+      clear: both;
+      width: 99%;
+      height: 1px;
+      overflow:visible;
+      position:relative;
+      margin: 20px 0 30px;
+      background-color:#e0e0e0;
+  }
+  .m-divider-text {
+      font-size: 18px;
+      margin-top:-14px;
+      display: block;
+      position:absolute;
+      transform:translateX(-50%);
+      background:#f7f7f7;
+      padding:0 20px;
+      font-weight: 300;
+      left: 50%;
+  }
+}
