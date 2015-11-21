@@ -10,7 +10,9 @@ import Navigation from '../Navigation';
 import LeftNavMenu from '../LeftNavMenu/LeftNavMenu';
 import Theme from '../Theme/Theme'
 import ThemeManager from 'material-ui/lib/styles/theme-manager'
+import ScrollSpy from '../ScrollSpy/ScrollSpy';
 
+var scrollSpy = {t:undefined}
 var Layout = React.createClass({
   propTypes: {
     children: PropTypes.element.isRequired
@@ -31,6 +33,7 @@ var Layout = React.createClass({
           <div className="m-content">
               {this.props.children}
           </div>
+          <ScrollSpy />
         </div>
     );
   }

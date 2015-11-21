@@ -11,7 +11,7 @@ export default class extends Component {
 
   render() {
     return (
-      <div>
+      <div id="introduction">
         <h4>cartGiftWrapping</h4>
         <p className="m-top-graph">
             Basic audit info about the object, including date, time,and user account. Identifier and time stamp information
@@ -37,7 +37,61 @@ export default class extends Component {
                 TAAASASDASS ADADSSAD SDSAD
             </dd>
         </dl>
+        <p className="m-divider">
+            <span className="m-divider-text">testDivider</span>
+        </p>
         <dl>
+            <dt className="m-dt-property-type">
+                <span className="m-dt-property">changeMessages</span>
+                <span className="m-dt-type">numeric</span>
+            </dt>
+            <dd className="m-dd-text">
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD Basic audit info TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+            </dd>
+        </dl>
+        <p className="m-divider">
+            <span className="m-divider-text">testDivider</span>
+        </p>
+        <dl id="structure">
+            <dt className="m-dt-property-type">
+                <span className="m-dt-property">changeMessages</span>
+                <span className="m-dt-type">numeric</span>
+            </dt>
+            <dd className="m-dd-text">
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD Basic audit info TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+            </dd>
+        </dl>
+        <p className="m-divider">
+            <span className="m-divider-text">testDivider</span>
+        </p>
+        <dl>
+            <dt className="m-dt-property-type">
+                <span className="m-dt-property">changeMessages</span>
+                <span className="m-dt-type">numeric</span>
+            </dt>
+            <dd className="m-dd-text">
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD Basic audit info TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+            </dd>
+        </dl>
+        <p className="m-divider">
+            <span className="m-divider-text">testDivider</span>
+        </p>
+        <dl id="initialization">
             <dt className="m-dt-property-type">
                 <span className="m-dt-property">changeMessages</span>
                 <span className="m-dt-type">numeric</span>

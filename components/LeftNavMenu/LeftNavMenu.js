@@ -12,14 +12,11 @@ let menuItems = [
     {route: 'sdks', text: 'SDKS'},
     {route: 'samples', text: 'SAMPLES'}
 ]
-var clickToggle = function(){
-    console.log('entra aqui');
-    window.arguments = arguments }
 var LeftNavMenu = React.createClass({
     render(){
         return (
             <LeftNav style={{paddingTop:'64px'}} ref="leftNav" docked={true} >
-                <List  onClick={clickToggle.bind(this)}>
+                <List className="list">
                     <ListItem nestedItems={[ <ListItem key={0}>The Big Picture</ListItem>, <ListItem key={1}>Major Concepts</ListItem>,
                         <ListItem key={2}>Get your own store</ListItem>
                     ]}>

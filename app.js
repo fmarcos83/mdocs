@@ -13,6 +13,7 @@ import Layout from './components/Layout';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 if(!canUseDOM){
+    global.window = {}
     global.navigator = {
         userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/45.0.2454.101 Chrome/45.0.2454.101 Safari/537.36'
     }
