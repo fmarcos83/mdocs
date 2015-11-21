@@ -14,15 +14,13 @@ let menuItems = [
 ]
 var clickToggle = function(){
     console.log('entra aqui');
-}
+    window.arguments = arguments }
 var LeftNavMenu = React.createClass({
     render(){
         return (
             <LeftNav style={{paddingTop:'64px'}} ref="leftNav" docked={true} >
-                <List>
-                    <ListItem autoGenerateNestedIndicator={false} nestedItems={[
-                        <ListItem key={0}>The Big Picture</ListItem>,
-                        <ListItem key={1}>Major Concepts</ListItem>,
+                <List  onClick={clickToggle.bind(this)}>
+                    <ListItem nestedItems={[ <ListItem key={0}>The Big Picture</ListItem>, <ListItem key={1}>Major Concepts</ListItem>,
                         <ListItem key={2}>Get your own store</ListItem>
                     ]}>
                         INTRO
@@ -33,10 +31,10 @@ var LeftNavMenu = React.createClass({
                     <ListItem>
                         APP DEVELOPMENT
                     </ListItem>
-                    <ListItem autoGenerateNestedIndicator={false} nestedItems={[
+                    <ListItem nestedItems={[
                         <ListItem key={0} nestedItems={[
                             <ListItem key={0}>Commerce</ListItem>
-                        ]}></ListItem>
+                        ]}>HOLA</ListItem>
                     ]}>
                         REST API REFERENCE
                     </ListItem>
