@@ -5,8 +5,9 @@
  */
 
 import React, { Component } from 'react';
-
 import './Content.scss';
+import './Highlight.scss';
+import Highlight from 'react-highlight';
 export default class extends Component {
 
   render() {
@@ -19,8 +20,9 @@ export default class extends Component {
         </p>
         <h4>JSON (example)</h4>
         <pre className="m-code">
-            <code className="m-json m-hljs">
-            </code>
+            <Highlight className="json">
+            {'{"test":"value"}'}
+            </Highlight>
         </pre>
         <h4>Properties</h4>
         <dl>
