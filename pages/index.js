@@ -108,6 +108,40 @@ export default class extends Component {
         <p className="m-divider">
             <span className="m-divider-text">testDivider</span>
         </p>
+        <dl id="initialization">
+            <dt className="m-dt-property-type">
+                <span className="m-dt-property">changeMessages</span>
+                <span className="m-dt-type">numeric</span>
+            </dt>
+            <dd className="m-dd-text">
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD Basic audit info TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+            </dd>
+        </dl>
+        <p className="m-divider">
+            <span className="m-divider-text">testDivider</span>
+        </p>
+        <dl id="initialization">
+            <dt className="m-dt-property-type">
+                <span className="m-dt-property">changeMessages</span>
+                <span className="m-dt-type">numeric</span>
+            </dt>
+            <dd className="m-dd-text">
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD Basic audit info TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+                Basic audit info
+                TAAASASDASS ADADSSAD SDSAD
+            </dd>
+        </dl>
+        <p className="m-divider">
+            <span className="m-divider-text">testDivider</span>
+        </p>
       </div>
     );
   }

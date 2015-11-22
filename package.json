@@ -52,6 +52,7 @@
   "dependencies": {
     "react-tap-event-plugin": "~0.2.1",
     "material-ui": "~0.13.3",
-    "react-scrollspy": "~0.1.5"
+    "react-scrollspy": "~0.1.5",
+    "react-scroll-spy": "~1.0.0"
   }
 }
