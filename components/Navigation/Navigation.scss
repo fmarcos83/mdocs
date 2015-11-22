@@ -6,6 +6,32 @@
 
 @import '../variables.scss';
 
+.m-expanded_menu {
+    display:none;
+}
+.m-collapsed_menu {
+    display:inline;
+}
+@media (min-width: $screen-sm-min){
+    .m-main-bar {
+        button:first-child{
+            display: inline-block !important;
+        }
+    }
+}
+@media (min-width: $screen-md-min){
+    .m-main-bar {
+        button:first-child{
+            display: none !important;
+        }
+        .m-collapsed_menu {
+            display: none;
+        }
+        .m-expanded_menu {
+            display: inline;
+        }
+    }
+}
 .m-logo-selector {
     margin-top: 16px;
     margin-right: 10px;

@@ -1,3 +1,12 @@
+@import '../variables.scss';
+.m-leftnav {
+    visibility: hidden;
+}
+@media (min-width: $screen-md-min){
+    .m-leftnav {
+        visibility: visible;
+    }
+}
 @define-mixin incremental_padding $width:30px {
     a {
         padding-left: $width;

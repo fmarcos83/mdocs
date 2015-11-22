@@ -11,6 +11,10 @@ import Tab from 'material-ui/lib/tabs/tab';
 import AppBar from 'material-ui/lib/app-bar';
 import FlatButton from 'material-ui/lib/flat-button';
 import Location from '../../core/Location';
+import IconMenu from 'material-ui/lib/menus/icon-menu';
+import IconButton from 'material-ui/lib/icon-button';
+import MenuItem from 'material-ui/lib/menus/menu-item';
+import {NavigationMoreVert} from 'material-ui/lib/svg-icons/index';
 
 var slideIndex = "0"
 var window = window || undefined
@@ -58,12 +62,15 @@ var handleClick = function(index, event){
     this.forceUpdate();
     Location.pushState(null,path);
 }
+let handleLeftClick = function(){
+    console.log(arguments);
+}
 var Navigation = React.createClass({
     render(){
         return (
-              <AppBar
+              <AppBar className="m-main-bar"
+                  onLeftIconButtonTouchTap={handleLeftClick.bind(this)}
                   style={{zIndex:9999,position:'fixed',top:0}}
-                  showMenuIconButton={false}
                   title={
                         <div>
                             <img className="m-logo-selector" key={0} src={require("./m_logo_white.svg")}></img>
@@ -72,12 +79,24 @@ var Navigation = React.createClass({
                   }
                   iconElementRight={
                       <div>
-                          <Tabs value={slideIndex}  tabItemContainerStyle={{height:'64px'}}>
-                            <Tab onClick={handleClick.bind(this,"0")} value="0" label="BIG PICTURE"></Tab>
-                            <Tab onClick={handleClick.bind(this,"1")} value="1" label="GETTING STARTED"></Tab>
-                            <Tab onClick={handleClick.bind(this,"2")} value="2" label="GUIDES"></Tab>
-                            <Tab onClick={handleClick.bind(this,"3")} value="3" label="DEVELOPER"></Tab>
-                          </Tabs>
+                          <div className="m-expanded_menu">
+                              <Tabs value={slideIndex}  tabItemContainerStyle={{height:'64px'}}>
+                                <Tab onClick={handleClick.bind(this,"0")} value="0" label="BIG PICTURE"></Tab>
+                                <Tab onClick={handleClick.bind(this,"1")} value="1" label="GETTING STARTED"></Tab>
+                                <Tab onClick={handleClick.bind(this,"2")} value="2" label="GUIDES"></Tab>
+                                <Tab onClick={handleClick.bind(this,"3")} value="3" label="DEVELOPER"></Tab>
+                              </Tabs>
+                          </div>
+                          <div className="m-collapsed_menu">
+                                <IconMenu iconButtonElement={
+                                    <IconButton><NavigationMoreVert color={'#fff'}/></IconButton>
+                                }>
+                                    <MenuItem onClick={handleClick.bind(this,"0")} primaryText="BIG PICTURE"/>
+                                    <MenuItem onClick={handleClick.bind(this,"1")} primaryText="GETTING STARTED"/>
+                                    <MenuItem onClick={handleClick.bind(this,"2")} primaryText="GUIDES"/>
+                                    <MenuItem onClick={handleClick.bind(this,"3")} primaryText="DEVELOPER"/>
+                                </IconMenu>
+                          </div>
                       </div>
                   }
               />

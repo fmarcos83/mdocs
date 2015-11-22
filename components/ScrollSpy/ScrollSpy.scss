@@ -1,14 +1,25 @@
+@import '../variables.scss';
+
 scroll {
+    visibility: hidden;
+}
+
+@media (min-width: $screen-md-min) {
+    scroll {
+        visibility: visible;
+    }
+}
+scroll {
+  position: fixed;
+  z-index: 999;
+  top: 100px;
+  right: 30px;
   h4 {
       font-size: 30px;
       font-weight: 300;
       margin-top: 14px;
       margin-bottom: 14px;
   }
-  position: fixed;
-  z-index: 999999;
-  top: 100px;
-  right: 67px;
   .selected {
     &:hover:before {
       border-left: red solid 2px;
