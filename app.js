@@ -11,6 +11,8 @@ import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import Location from './core/Location';
 import Layout from './components/Layout';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import PubSub from 'pubsub-js/src/pubsub.js'
+
 injectTapEventPlugin();
 if(!canUseDOM){
     global.window = {}

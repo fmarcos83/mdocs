@@ -29,12 +29,15 @@ var Layout = React.createClass({
     return (
         <div>
           <Navigation />
-          <LeftNavMenu />
-          <div className="Layout">
-            <div className="m-content">
-                {this.props.children}
-            </div>
-            <ScrollSpy />
+          <div>
+              <LeftNavMenu>
+                  <div className="Layout">
+                    <div className="m-content">
+                        {this.props.children}
+                    </div>
+                    <ScrollSpy />
+                  </div>
+              </LeftNavMenu>
           </div>
         </div>
     );

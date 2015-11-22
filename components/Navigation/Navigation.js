@@ -63,7 +63,7 @@ var handleClick = function(index, event){
     Location.pushState(null,path);
 }
 let handleLeftClick = function(){
-    console.log(arguments);
+    PubSub.publish('MENU_SHOW',true);
 }
 var Navigation = React.createClass({
     render(){
