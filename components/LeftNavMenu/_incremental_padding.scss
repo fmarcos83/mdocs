@@ -1,0 +1,5 @@
+@mixin incremental_padding($width) {
+    a {
+        padding-left: $width + 10px;
+    }
+}

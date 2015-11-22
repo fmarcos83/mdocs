@@ -1,14 +1,52 @@
-.react-sanfona {
-    width: 100%;
+@define-mixin incremental_padding $width:30px {
+    a {
+        padding-left: $width;
+    }
 }
+
+.react-sanfona-item.react-sanfona-item-expanded {
+    background: #fff;
+    h3 {
+        font-weight:300;
+    }
+}
+
 .react-sanfona-item {
+    border-bottom: solid 1px #ddd;
+    .m-active {
+        border-left: 1px solid red;
+        padding-left: 5px;
+        font-weight: 300;
+    }
     h3 {
         font-size: 20px;
         line-height: 60px;
-        height: 60px;
-        font-weight: 100;
+        font-weight: 200;
     }
-    border-bottom: solid 1px #ddd;
+    ul {
+        margin-top: 0;
+        list-style: none;
+        font-weight: 100;
+        padding: 0;
+        @mixin incremental_padding;
+        ul {
+            @mixin incremental_padding 40px;
+            ul {
+                @mixin incremental_padding 50px;
+                ul {
+                    @mixin incremental_padding 60px;
+                }
+            }
+        }
+    }
+    a {
+        padding: 5px;
+        display: block;
+        cursor: pointer;
+    }
+    a:hover {
+        background: rgba(0,0,0,0.05);
+    }
 }
 .m-item-container {
     padding-left: 30px;
