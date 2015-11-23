@@ -3,14 +3,14 @@
     visibility: hidden;
 }
 .m-leftnav-toggle {
-    visibility: visible;
+    display: inline-block;
 }
 @media (min-width: $screen-md-min){
     .m-leftnav {
         visibility: visible;
     }
     .m-leftnav-toggle {
-        visibility: hidden;
+        display: none;
     }
 }
 $item-color:#ebebeb;
