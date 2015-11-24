@@ -3,32 +3,34 @@
     visibility: hidden;
 }
 .m-leftnav-toggle {
-    display: inline-block;
+    visibility: visible;
 }
 @media (min-width: $screen-md-min){
     .m-leftnav {
         visibility: visible;
     }
     .m-leftnav-toggle {
-        display: none;
+        visibility: hidden;
     }
 }
 $item-color:#ebebeb;
+$item-color-expanded:#fff;
 @define-mixin incremental_padding $width:30px {
     a {
+        position: relative;
         padding-left: $width;
     }
 }
 
 .react-sanfona-item.react-sanfona-item-expanded {
     h3 {
-        background: $item-color;
+        background: $item-color-expanded;
         font-weight:300;
     }
 }
 
 .react-sanfona-item {
-    background: #fff;
+    background: $item-color-expanded;
     border-bottom: solid 1px #ddd;
     .m-active {
         border-left: 2px solid red;
