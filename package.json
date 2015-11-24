@@ -50,10 +50,14 @@
     "deploy": "babel-node --eval \"require('./tools/deploy')().catch(err => console.log(err.stack))\""
   },
   "dependencies": {
+    "highlight.js": "^8.9.1",
     "material-ui": "~0.13.3",
     "pubsub-js": "^1.5.3",
+    "react-highlight": "^0.5.1",
+    "react-ink": "^5.0.2",
     "react-scroll-spy": "~1.0.0",
-    "react-scrollspy": "~0.1.5",
-    "react-tap-event-plugin": "~0.2.1"
+    "react-scrollspy": "^0.1.5",
+    "react-tap-event-plugin": "~0.2.1",
+    "react-sanfona": "^0.0.7"
   }
 }
