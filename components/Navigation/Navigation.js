@@ -14,6 +14,7 @@ import Location from '../../core/Location';
 import IconMenu from 'material-ui/lib/menus/icon-menu';
 import IconButton from 'material-ui/lib/icon-button';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import Ink      from 'react-ink';
 import {NavigationMoreVert} from 'material-ui/lib/svg-icons/index';
 
 var slideIndex = "0"
@@ -70,7 +71,7 @@ var Navigation = React.createClass({
         return (
               <AppBar className="m-main-bar"
                   onLeftIconButtonTouchTap={handleLeftClick.bind(this)}
-                  style={{zIndex:9999,position:'fixed',top:0}}
+                  style={{zIndex:9999,position:'fixed',top:0,maxHeight:"64px"}}
                   title={
                         <div>
                             <img className="m-logo-selector" key={0} src={require("./m_logo_white.svg")}></img>
@@ -80,13 +81,18 @@ var Navigation = React.createClass({
                   iconElementRight={
                       <div>
                           <div className="m-expanded_menu">
-                              <Tabs value={slideIndex}  tabItemContainerStyle={{height:'64px'}}>
+                              <Tabs tabItemContainerStyle={{height:'64px'}} value={slideIndex}>
                                 <Tab onClick={handleClick.bind(this,"0")} value="0" label="BIG PICTURE"></Tab>
                                 <Tab onClick={handleClick.bind(this,"1")} value="1" label="GETTING STARTED"></Tab>
                                 <Tab onClick={handleClick.bind(this,"2")} value="2" label="GUIDES"></Tab>
                                 <Tab onClick={handleClick.bind(this,"3")} value="3" label="DEVELOPER"></Tab>
                               </Tabs>
                           </div>
+                          <ul className="m-contextual-actions">
+                              <li><a><Ink/>SEARCH</a></li>
+                              <li><a><Ink/>COMUNITY</a></li>
+                              <li><a><Ink/>LOGIN</a></li>
+                          </ul>
                           <div className="m-collapsed_menu">
                                 <IconMenu iconButtonElement={
                                     <IconButton><NavigationMoreVert color={'#fff'}/></IconButton>
@@ -95,6 +101,9 @@ var Navigation = React.createClass({
                                     <MenuItem onClick={handleClick.bind(this,"1")} primaryText="GETTING STARTED"/>
                                     <MenuItem onClick={handleClick.bind(this,"2")} primaryText="GUIDES"/>
                                     <MenuItem onClick={handleClick.bind(this,"3")} primaryText="DEVELOPER"/>
+                                    <MenuItem onClick={handleClick.bind(this,"4")} primaryText="SEARCH"/>
+                                    <MenuItem onClick={handleClick.bind(this,"5")} primaryText="COMUNITY"/>
+                                    <MenuItem onClick={handleClick.bind(this,"6")} primaryText="LOGIN"/>
                                 </IconMenu>
                           </div>
                       </div>
