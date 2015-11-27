@@ -1,18 +1,18 @@
 @import '../variables.scss';
 
-scroll {
+.m-scroll {
     visibility: hidden;
 }
 
 @media (min-width: $screen-md-min) {
-    scroll {
+    .m-scroll {
         visibility: visible;
     }
 }
-scroll {
+.m-scroll {
   position: fixed;
   z-index: 999;
-  top: 100px;
+  top: 110px;
   right: 30px;
   h4 {
       font-size: 30px;
@@ -45,9 +45,11 @@ scroll {
     }
     list-style:none;
     a {
+        text-transform: capitalize;
         font-weight: 100;
         text-decoration: none;
         color: #000;
+        cursor: pointer;
     }
   }
 }
