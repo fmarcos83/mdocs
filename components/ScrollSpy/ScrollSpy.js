@@ -29,21 +29,23 @@ let calculateDomOffset = function(domNode){
     return domNode.offsetTop
 };
 let isOverLapping = function(scrollPos, idPositions){
-    return idPositions.filter(function(el){return el.offset<=scrollPos}).pop().id
+    if(scrollPos===0){
+        return idPositions[0].id
+    }else{
+        return idPositions.filter(function(el){return el.offset<=scrollPos}).pop().id
+    }
 }
 let refreshScrollSpy = function(offsetTop, idPositions){
     window.requestAnimationFrame((function(){
-        let scrollHeight = document.body.offsetHeight - window.innerHeight;
-        let scrollPos = scrollHeight+window.scrollY
+        let scrollPos = window.scrollY
         selectedIndex = isOverLapping(scrollPos, idPositions);
         this.forceUpdate();
     }).bind(this));
 }
 
 let scrollToMarker = function(marker, markers){
-    let scrollHeight = document.body.offsetHeight - window.innerHeight;
     let currentMarker = markers.filter(function(mark){return mark.id===marker}).pop();
-    let posY = currentMarker.offset-scrollHeight
+    let posY = currentMarker.offset
     scrollTo(0, posY);
 }
 
@@ -63,7 +65,7 @@ let ScrollSpy = React.createClass({
                 let idElements = this.props.items;
                 let offsetTopElements = idElements.map(function(idElement){
                     return {
-                        offset: calculateDomOffset(document.getElementById(idElement)),
+                        offset: calculateDomOffset(document.getElementById(idElement)) - window.innerHeight,
                         id: idElement
                     };
                 });
