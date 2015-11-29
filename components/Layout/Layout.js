@@ -35,7 +35,7 @@ var Layout = React.createClass({
                     <div className="m-content">
                         {this.props.children}
                     </div>
-                    <ScrollSpy />
+                    <ScrollSpy items={['introduction','structure','initialization']}/>
                   </div>
               </LeftNavMenu>
           </div>
