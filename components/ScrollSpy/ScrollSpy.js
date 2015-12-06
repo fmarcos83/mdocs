@@ -3,6 +3,10 @@ import './ScrollSpy.scss'
 import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import _ from 'underscore';
 
+if (!canUseDOM){
+    global.window = {};
+}
+
 let scroll = undefined
 let selectedIndex = '';
 let map = undefined;
