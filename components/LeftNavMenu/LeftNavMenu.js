@@ -4,7 +4,8 @@ import List from 'material-ui/lib/lists/list'
 import ListDivider from 'material-ui/lib/lists/list-divider'
 import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import ListItem from 'material-ui/lib/lists/list-item'
-import Accordion from './Accordion.js'
+import Accordion from './Accordion'
+import HeaderMenu from './HeaderMenu'
 import './LeftNavMenu.scss'
 
 let LeftNavMenu = React.createClass({
@@ -25,7 +26,7 @@ let LeftNavMenu = React.createClass({
                     </LeftNav>
                 </div>
                 <div className="m-leftnav-toggle">
-                    <LeftNav style={{paddingTop:'72px',overflowY: 'auto', background:"#ebebeb"}} ref="leftNav" docked={false} >
+                    <LeftNav header={HeaderMenu.bind(this)()} style={{paddingTop:'64px',overflowY: 'auto', background:"#ebebeb"}} ref="leftNav" docked={false} >
                         <Accordion />
                     </LeftNav>
                 </div>

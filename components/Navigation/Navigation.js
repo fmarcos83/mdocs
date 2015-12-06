@@ -90,22 +90,9 @@ var Navigation = React.createClass({
                           </div>
                           <ul className="m-contextual-actions">
                               <li><a><Ink/>SEARCH</a></li>
-                              <li><a><Ink/>COMUNITY</a></li>
+                              <li><a><Ink/>COMMUNITY</a></li>
                               <li><a><Ink/>LOGIN</a></li>
                           </ul>
-                          <div className="m-collapsed_menu">
-                                <IconMenu iconButtonElement={
-                                    <IconButton><NavigationMoreVert color={'#fff'}/></IconButton>
-                                }>
-                                    <MenuItem onClick={handleClick.bind(this,"0")} primaryText="BIG PICTURE"/>
-                                    <MenuItem onClick={handleClick.bind(this,"1")} primaryText="GETTING STARTED"/>
-                                    <MenuItem onClick={handleClick.bind(this,"2")} primaryText="GUIDES"/>
-                                    <MenuItem onClick={handleClick.bind(this,"3")} primaryText="DEVELOPER"/>
-                                    <MenuItem onClick={handleClick.bind(this,"4")} primaryText="SEARCH"/>
-                                    <MenuItem onClick={handleClick.bind(this,"5")} primaryText="COMUNITY"/>
-                                    <MenuItem onClick={handleClick.bind(this,"6")} primaryText="LOGIN"/>
-                                </IconMenu>
-                          </div>
                       </div>
                   }
               />

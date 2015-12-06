@@ -1,0 +1,32 @@
+.m-header-menu {
+    background-color:#d50000;
+    color: rgba(255,255,255,0.6);
+    padding:20px 0;
+    margin-left: -20px;
+    font-weight: 300;
+    a {
+        cursor: pointer;
+    }
+}
+.m-horizontal-header-menu {
+    margin-left: -15px;
+    text-align: center;
+    li {
+        padding:0 5px;
+        font-size: 14px;
+        display: inline;
+        list-style: none;
+    }
+}
+.m-vertical-header-menu {
+    li {
+        padding: 9px 0;
+        list-style: none;
+    }
+    .active {
+        font-weight:bold;
+        color: #fff;
+        padding-bottom: 4px;
+        border-bottom: solid 2px #fff;
+    }
+}
