@@ -8,7 +8,6 @@ let handleClick = function(index, event){
     let path='/'
     event.preventDefault();
     slideIndex = index
-    console.log(index)
     switch(index){
         case "0":
             path='/'
