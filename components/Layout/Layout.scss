@@ -7,27 +7,45 @@
 @import '../variables.scss';
 
 .m-content {
-   margin-left: 10px;
-   margin-right: 10px;
+   .m-dt-property-type {
+        float: none;
+        width:100%;
+        text-align: center;
+        padding:0;
+        padding-bottom: 20px;
+    }
+    .m-dd-text {
+        width: 100%;
+        margin-left: 0;
+    }
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-@media (min-width: $screen-sm-min) {
-   margin-left: 10px;
-   margin-right: 10px;
-}
-
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-ssm-min) {
     .m-content {
-       margin-left: 100px;
-       margin-right: 120px;
+       margin-left: 10px;
+       margin-right: 10px;
+      .m-dt-property-type {
+          float: left;
+          width: 30%;
+          text-align: right;
+          padding-right: 10px;
+       }
+       .m-dd-text {
+          width: 66%;
+          margin-left: 33%;
+       }
     }
 }
+
 @media (min-width: $screen-md-min) {
     .m-content {
        margin-left: 300px;
        margin-right: 220px;
     }
 }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -53,12 +71,7 @@ html, body {
       margin-bottom: 60px;
       font-size: 15px;
   }
-  .m-dt-property-type {
-      float: left;
-      width: 30%;
-      text-align: right;
-      padding-right: 10px;
-  }
+  
   .m-dt-property {
       font-size: 18px;
       margin-bottom:10px;
@@ -78,10 +91,8 @@ html, body {
       padding: 0 10px 0 10px;
   }
   .m-dd-text {
-      width: 66%;
       padding-left: 10px;
       font-weight: 300;
-      margin-left: 33%;
       margin-bottom: 30px;
       font-size: 15px;
   }
